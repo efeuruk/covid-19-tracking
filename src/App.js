@@ -3,6 +3,7 @@ import './App.css';
 import Card from './components/Card/Card';
 
 function App() {
+  const date = new Date();
   return (
     <div className="container">
       <h1>Total Cases Around the World</h1>
@@ -16,6 +17,8 @@ function App() {
         <Card country="Italy" short="IT" 
         api="https://api.apify.com/v2/key-value-stores/UFpnR8mukiu0TSrb4/records/LATEST" />
       </div>
+      <p>Copyright &copy; {date.getFullYear()}</p>
+      <p>Ersoy Efe Uruk</p>
     </div>
   );
 }
