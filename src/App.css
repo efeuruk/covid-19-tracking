@@ -1,38 +1,62 @@
-.App {
+body {
+  background-color: #000938;
+}
+
+.container {
   text-align: center;
+  color: #e3e3e3;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: initial;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  
+  width: 100%;
+  height: 50%;
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 20px 80px;
+  width: 200px;
+  height: 250px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+h2:before {
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  content: " ";
+  background-size: 100% 100%;
+  width: 20px;
+  height: 20px;
+}
+
+.TR::before {
+  background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/tr.svg');
+}
+
+.UK::before {
+  background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/gb.svg');
+}
+
+.BE::before {
+  background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/be.svg');
+}
+
+.IT::before {
+  background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/it.svg');
 }
