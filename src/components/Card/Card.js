@@ -10,6 +10,7 @@ export default function Card(props) {
     const [infected, setInfected] = useState(0);
     const [deceased, setDeceased] = useState(0);
     const [recovered, setRecovered] = useState(0);
+    const [lastUpdate, setLastUpdate] = useState('');
 
 
     useEffect(() => {
@@ -22,6 +23,7 @@ export default function Card(props) {
                 setInfected(result?.infected);
                 setDeceased(result?.deceased);
                 setRecovered(result?.recovered);
+                setLastUpdate(result?.lastUpdatedAtSource);
                 if (props.country==="Belgium") {
                     setDeceased(result?.deaths);
                 }
@@ -53,6 +55,7 @@ export default function Card(props) {
                 <p>Total infected: {infected}</p>
                 <p style={{color: '#f23030'}}>Total deceased: {deceased}</p>
                 <p style={{color: '#00c91e'}}>Total recovered: {recovered}</p>
+                <p>Last Update: {lastUpdate.substr(0,10)}</p>
             </div>
         )
     }
