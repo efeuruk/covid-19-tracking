@@ -1,8 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import loading from '../../../src/assets/loading.gif';
 
-// Turkey, UK, Belgium, USA
-
 export default function Card(props) {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
@@ -24,14 +22,16 @@ export default function Card(props) {
                 setDeceased(result?.deceased);
                 setRecovered(result?.recovered);
                 setLastUpdate(result?.lastUpdatedAtSource);
-                if (props.country==="Belgium") {
+                if (props.country === "Belgium") {
                     setDeceased(result?.deaths);
                 }
-                else if (props.country==="Italy") {
+                else if (props.country === "Italy") {
                     setTested("N/A")
                     setInfected(result?.totalCases);
                     setRecovered(result?.dischargedHealed);
-                    
+                }
+                else if (props.country === "Spain" || props.country === "Germany") {
+                    setLastUpdate(result?.lastUpdatedAtApify);
                 }
             },
             (error) => {
@@ -55,7 +55,7 @@ export default function Card(props) {
                 <p>Total infected: {infected}</p>
                 <p style={{color: '#f23030'}}>Total deceased: {deceased}</p>
                 <p style={{color: '#00c91e'}}>Total recovered: {recovered}</p>
-                <p>Last Update: {lastUpdate.substr(0,10)}</p>
+                <p>Last Update: {lastUpdate?.substr(0,10)}</p>
             </div>
         )
     }

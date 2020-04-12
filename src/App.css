@@ -3,22 +3,17 @@ body {
 }
 
 .container {
+  max-width: 90%;
+  margin: 0 auto;
   text-align: center;
   color: #e3e3e3;
 }
 
 .card-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  text-align: initial;
-  position: absolute;
-  margin-top: 30px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 50%;
+  margin-top: 60px;
 }
 
 .card {
@@ -26,7 +21,7 @@ body {
   border-radius: 20px;
   padding: 20px 80px;
   width: 200px;
-  height: 250px;
+  min-height: 250px;
   margin-bottom: 70px;
 }
 
@@ -60,4 +55,12 @@ h2:before {
 
 .IT::before {
   background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/it.svg');
+}
+
+.GE::before {
+  background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/de.svg');
+}
+
+.SP::before {
+  background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/4x3/es.svg');
 }
