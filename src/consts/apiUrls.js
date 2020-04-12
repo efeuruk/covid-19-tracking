@@ -27,7 +27,7 @@ const apiList = {
     "SP_API": {
         country: "Spain",
         short: "SP",
-        api: "https://api.apify.com/v2/key-value-stores/XV4DWf1ctkSPA8H99/records/LATEST"
+        api: "https://api.apify.com/v2/key-value-stores/lluBbYoQVN65R3BGO/records/LATEST"
     },
 }
 
