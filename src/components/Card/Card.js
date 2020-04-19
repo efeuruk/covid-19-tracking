@@ -26,11 +26,12 @@ export default function Card(props) {
                     setDeceased(result?.deaths);
                 }
                 else if (props.country === "Italy") {
-                    setTested("N/A")
+                    setTested(result?.tamponi)
                     setInfected(result?.totalCases);
                     setRecovered(result?.dischargedHealed);
                 }
                 else if (props.country === "Spain" || props.country === "Germany") {
+                    setTested("N/A")
                     setLastUpdate(result?.lastUpdatedAtApify);
                 }
             },
