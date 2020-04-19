@@ -6,7 +6,7 @@ import CardContainer from './components/CardContainer/CardContainer';
 function App() {
   return (
     <div className="container">
-      <h1>Total Cases Around the World</h1>
+      <h1>Total Covid-19 Cases Around the World</h1>
       <CardContainer />
       <Footer />
     </div>

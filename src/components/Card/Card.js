@@ -50,7 +50,10 @@ export default function Card(props) {
     else {
         return (
             <div className="card">
-                <h2 className={props.short}>{props.country}</h2>
+                <h2 className={props.short}>
+                    <span className="flag"></span>
+                    <span className="title">{props.country}</span>
+                </h2>
                 <p>Total tested: {tested}</p>
                 <p>Total infected: {infected}</p>
                 <p style={{color: '#f23030'}}>Total deceased: {deceased}</p>
